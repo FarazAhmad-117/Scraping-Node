@@ -36,9 +36,13 @@ class ProductDataExtractor {
         .trim();
 
       const availability = $("p.availability span").text().trim();
-      const price = $("div.price-box span.regular-price span.price")
-        .text()
-        .trim();
+      const price = $(
+        "div.product-shop div.price-box span.regular-price span.price"
+      )
+        ?.first()
+        ?.text()
+        ?.trim();
+
       const paintedPrice = $("table#myOptions tr.painted td.price")
         ?.text()
         ?.trim();
