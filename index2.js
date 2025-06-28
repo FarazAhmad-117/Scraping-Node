@@ -1,6 +1,6 @@
 const puppeteer = require("puppeteer");
 const ProductDataExtractor = require("./utils/ProductDataExtractor");
-const productUrls = require("./products-urls.json");
+const productUrls = require("./errored-urls.json");
 
 const main = async () => {
   const browser = await puppeteer.launch({
